@@ -9,9 +9,9 @@ import { async } from 'regenerator-runtime/runtime';
 
 // https://forkify-api.herokuapp.com/v2
 
-if (module.hot) {
-  module.hot.accept();
-}
+// if (module.hot) {
+//   module.hot.accept();
+// }
 
 const controlRecipes = async function () {
   try {
@@ -43,8 +43,9 @@ const controlSearchResults = async function () {
     await model.loadSearchResults(query);
 
     // 3) Render search result
-    console.log(model.state.search.results);
-    resultsView.render(model.state.search.results)
+    // resultsView.render(model.state.search.results)
+    resultsView.render(model.getSearchResultsPage());
+
 
   } catch (err) {
     console.log(err)
