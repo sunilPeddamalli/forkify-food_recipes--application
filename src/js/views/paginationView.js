@@ -28,7 +28,7 @@ class PaginationView extends View {
                 </svg>
             </button>
             `
-        }
+        };
 
         // last page    
         if (curPage === numPages && numPages > 1) {
@@ -40,7 +40,7 @@ class PaginationView extends View {
                     <span>Page ${curPage - 1}</span>
                 </button>
             `
-        }
+        };
 
         // other page
         if (curPage < numPages) {
@@ -58,7 +58,7 @@ class PaginationView extends View {
                 </svg>
             </button>
             `
-        }
+        };
 
         // Page 1, and there are no other pages
         return ''
